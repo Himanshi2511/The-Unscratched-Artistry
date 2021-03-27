@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+}
+#banner{
+    background-image:url(bg/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    }
+    .banner-t{
+        text-align: center;
+        color: rgb(202, 35, 146);
+        padding-top: 100px;
+    }
+    .banner-t h1{
+        font-size: 50px;
+        font-family: 'Kaushan Script' , cursive;  
+        margin-bottom: 15px;
+     }
+     .banner-t p{
+        font-size: 35px;
+        font-style: italic;
+     }
+
+
+    
+    
+    @media screen and (max-width: 770px){
+        .banner-t h1{
+            font-size: 44px;
+        }
+    
+    }
+    
+
+    
+    #service{
+        width: 100%;
+        padding: 70px 0;
+    }
+    .ttext{
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    .ttext h1{
+        margin: auto;
+        font-size: 40px;
+        color: #009688;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+    .ttext h1::after{
+        content: '';
+        width: 50px;
+        height: 35px;
+        background: linear-gradient(#019587,#fff);
+        position: absolute;
+        top: -20;
+        left: 0;
+        z-index: -1;
+        transform: rotate(10deg);
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+    
+    
+    
+    /*--service--*/
+    
+    #service{
+        width: 100%;
+        padding: 70px 0;
+        background: #e6c1d5;
+    }
+    .sbox{
+        width:80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+    }
+    .abc{
+        flex-basis: 48%;
+        text-align: center;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        color: #fff;
+        position: relative;
+    }
+    .abc img{
+        width: 100%;
+        border-radius: 7px;
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 7px;
+        cursor: pointer;
+        background: linear-gradient(rgba(0,0,0,0.5),#009688);
+        opacity: 0;
+        transition: 1s;
+    }
+    .abc:hover .overlay{
+        opacity: 1;
+    }
+    .sdesc{
+        width: 80%;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: 1s;
+    }
+    hr{
+        background: #fff;
+        height: 2px;
+        border: 0;
+        margin: 15px auto;
+        width: 60%;
+    }
+    .sdesc p{
+        font-size: 20px;
+    }
+
+    .sdesc h3{
+        font-size: 40px;
+    }
+    .abc:hover .sdesc{
+        bottom: 40%;
+        opacity: 1;
+    }
+    @media screen and(max-width: 770px){
+        .abc{
+            flex-basis: 100%;
+            margin-bottom: 30px;
+        }
+        .sdesc p{
+            font-size: 12px;
+        }
+        hr{
+            margin: 5px auto;
+        }
+        .abc:hover .sdesc{
+            bottom: 25% ! important ;
+    }
+}
